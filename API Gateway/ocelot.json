@@ -1,0 +1,142 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/productos",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7279
+        }
+      ],
+      "UpstreamPathTemplate": "/productos",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHttpMethod": "Get",
+      "Swaggerkey": "Productos"
+    },
+    {
+      "DownstreamPathTemplate": "/api/productos/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7279
+        }
+      ],
+      "UpstreamPathTemplate": "/productos/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHttpMethod": "Get",
+      "Swaggerkey": "Productos"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/users",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7260
+        }
+      ],
+      "UpstreamPathTemplate": "/users",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHttpMethod": "Get",
+      "Swaggerkey": "Users"
+    },
+    {
+      "DownstreamPathTemplate": "/api/users/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7260
+        }
+      ],
+      "UpstreamPathTemplate": "/users/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHttpMethod": "Get",
+      "Swaggerkey": "Users",
+      "FileCacheOptions": {
+        "TtlSeconds": 5,
+        "Region": "Users"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/users",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7260
+        }
+      ],
+      "UpstreamPathTemplate": "/users",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamHttpMethod": "Post",
+      "Swaggerkey": "Users"
+    },
+    {
+      "DownstreamPathTemplate": "/api/users/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7260
+        }
+      ],
+      "UpstreamPathTemplate": "/users/{id}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamHttpMethod": "Put",
+      "Swaggerkey": "Users"
+    },
+    {
+      "DownstreamPathTemplate": "/api/users/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7260
+        }
+      ],
+      "UpstreamPathTemplate": "/users/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamHttpMethod": "Delete",
+      "Swaggerkey": "Users\""
+    }
+
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7073",
+    "FileCacheOptions": {
+      "TtlSeconds": 60,
+      "Region": "default"
+    },
+    "swaggerEndPoints": [
+      {
+        "Key": "Productos",
+        "Config": [
+          {
+            "Name": "Productos API",
+            "Scheme": "https",
+            "Host": "localhost",
+            "Port": 7279,
+            "Path": "/swagger/v1/swagger.json"
+          }
+        ]
+      },
+      {
+        "Key": "Users",
+        "Config": [
+          {
+            "Name": "Users API",
+            "Scheme": "https",
+            "Host": "localhost",
+            "Port": 7260,
+            "Path": "/swagger/v1/swagger.json"
+          }
+        ]
+      }
+    ]
+  }
+}
